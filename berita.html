@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Desa | Portal Digital Desa Purworejo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="spinner"></div>
+    <p>Memuat berita...</p>
+</div>
+
+<!-- TOPBAR -->
+<section class="topbar">
+    <div class="container topbar-content">
+        <div class="top-left">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Desa Purworejo • Kecamatan Balong • Kabupaten Ponorogo</span>
+        </div>
+        <div class="top-right">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo-ponorogo.png" alt="Logo Kabupaten Ponorogo" class="logo-kabupaten">
+                <div class="logo-text">
+                    <h2>PEMERINTAH DESA PURWOREJO</h2>
+                    <span>Kecamatan Balong • Kabupaten Ponorogo</span>
+                </div>
+                <img src="images/logo-desa.png" alt="Logo Desa Purworejo" class="logo-desa">
+            </a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#" onclick="segeraHadir('Profil');return false;">Profil</a></li>
+                    <li><a href="#" onclick="segeraHadir('Pemerintahan');return false;">Pemerintahan</a></li>
+                    <li><a href="berita.html" class="active">Berita</a></li>
+                    <li><a href="statistics.html">Statistik</a></li>
+                    <li><a href="#" onclick="segeraHadir('PPID');return false;">PPID</a></li>
+                    <li><a href="index.html#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="header-button">
+                <a href="https://purworejobersatu.github.io/surat-desa-purworejo/" target="_blank" rel="noopener" class="btn-primary">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>Ajukan Surat</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle"><i class="bi bi-list"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container" data-aos="fade-up">
+        <h1>Berita Desa</h1>
+        <p>Informasi terbaru Pemerintah Desa Purworejo</p>
+    </div>
+</section>
+
+<!-- SEARCH -->
+<section class="news-search">
+    <div class="container" data-aos="fade-up">
+        <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" id="searchBerita" placeholder="Cari berita...">
+        </div>
+    </div>
+</section>
+
+<!-- NEWS LIST -->
+<section class="news-list">
+    <div class="container">
+        <div id="newsContainer" class="news-grid">
+            <div class="loading-news">
+                <div class="spinner-small"></div>
+                <p>Memuat berita...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo-ponorogo.png" alt="Logo">
+                    <img src="images/logo-desa.png" alt="Logo Desa">
+                </div>
+                <h3>Portal Digital Desa</h3>
+                <p>Website resmi Pemerintah Desa Purworejo.</p>
+            </div>
+            <div class="footer-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="statistics.html">Statistik</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Pemerintah Desa Purworejo</p>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/config.js"></script>
+<script src="js/helper.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/api.js"></script>
+<script src="js/berita.js"></script>
+
+<script>
+AOS.init({ duration: 800, once: true });
+window.addEventListener('load', () => {
+    document.getElementById('loader').classList.add('hide');
+});
+</script>
+
+</body>
+</html>

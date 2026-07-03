@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistik Desa | Portal Digital Desa Purworejo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="loader" id="loader">
+    <div class="spinner"></div>
+    <p>Memuat statistik...</p>
+</div>
+
+<!-- TOPBAR -->
+<section class="topbar">
+    <div class="container topbar-content">
+        <div class="top-left">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Desa Purworejo • Kecamatan Balong • Kabupaten Ponorogo</span>
+        </div>
+        <div class="top-right">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo-ponorogo.png" alt="Logo Kabupaten Ponorogo" class="logo-kabupaten">
+                <div class="logo-text">
+                    <h2>PEMERINTAH DESA PURWOREJO</h2>
+                    <span>Kecamatan Balong • Kabupaten Ponorogo</span>
+                </div>
+                <img src="images/logo-desa.png" alt="Logo Desa Purworejo" class="logo-desa">
+            </a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="#" onclick="segeraHadir('Profil');return false;">Profil</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="statistics.html" class="active">Statistik</a></li>
+                    <li><a href="#" onclick="segeraHadir('PPID');return false;">PPID</a></li>
+                    <li><a href="index.html#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="header-button">
+                <a href="https://purworejobersatu.github.io/surat-desa-purworejo/" target="_blank" rel="noopener" class="btn-primary">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>Ajukan Surat</span>
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle"><i class="bi bi-list"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+    <div class="container" data-aos="fade-up">
+        <div class="page-banner-content">
+            <h1>Statistik Desa</h1>
+            <p>Dashboard Kependudukan dan Data Statistik Pemerintah Desa Purworejo</p>
+        </div>
+    </div>
+</section>
+
+<!-- FILTER -->
+<section class="statistics-filter">
+    <div class="container">
+        <div class="filter-card" data-aos="fade-up">
+            <div class="chart-header">
+                <h2><i class="bi bi-funnel-fill"></i> Filter Statistik</h2>
+                <p>Pilih wilayah untuk melihat data berdasarkan Dusun, RW dan RT.</p>
+            </div>
+            <div class="active-filter">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Menampilkan: <strong id="currentFilter">Seluruh Desa</strong></span>
+            </div>
+            <div class="filter-grid">
+                <div class="filter-item">
+                    <label><i class="bi bi-houses"></i> Dusun</label>
+                    <select id="filterDusun">
+                        <option value="">Semua Dusun</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label><i class="bi bi-diagram-3"></i> RW</label>
+                    <select id="filterRW">
+                        <option value="">Semua RW</option>
+                    </select>
+                </div>
+                <div class="filter-item">
+                    <label><i class="bi bi-grid-3x3"></i> RT</label>
+                    <select id="filterRT">
+                        <option value="">Semua RT</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STAT CARDS -->
+<section class="statistics-card">
+    <div class="container">
+        <div class="stat-grid" data-aos="fade-up">
+            <div class="stat-box">
+                <i class="bi bi-people-fill"></i>
+                <h2 id="totalPenduduk">0</h2>
+                <span>Total Penduduk</span>
+            </div>
+            <div class="stat-box">
+                <i class="bi bi-house-door-fill"></i>
+                <h2 id="totalKK">0</h2>
+                <span>Kepala Keluarga</span>
+            </div>
+            <div class="stat-box">
+                <i class="bi bi-gender-male"></i>
+                <h2 id="totalLaki">0</h2>
+                <span>Laki-laki</span>
+            </div>
+            <div class="stat-box">
+                <i class="bi bi-gender-female"></i>
+                <h2 id="totalPerempuan">0</h2>
+                <span>Perempuan</span>
+            </div>
+            <div class="stat-box">
+                <i class="bi bi-buildings-fill"></i>
+                <h2 id="totalDusun">0</h2>
+                <span>Dusun</span>
+            </div>
+            <div class="stat-box">
+                <i class="bi bi-diagram-3-fill"></i>
+                <h2 id="totalRW">0</h2>
+                <span>RW</span>
+            </div>
+            <div class="stat-box">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+                <h2 id="totalRT">0</h2>
+                <span>RT</span>
+            </div>
+            <div class="stat-box">
+                <i class="bi bi-house-fill"></i>
+                <h2 id="totalRumah">0</h2>
+                <span>Rumah</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CHARTS -->
+<section class="statistics-chart">
+    <div class="container">
+        <div class="chart-row">
+            <div class="chart-card" data-aos="fade-up">
+                <div class="chart-header">
+                    <h2><i class="bi bi-bar-chart-fill"></i> Grafik Penduduk</h2>
+                    <p>Statistik jumlah penduduk berdasarkan jenis kelamin.</p>
+                </div>
+                <canvas id="pendudukChart"></canvas>
+            </div>
+            <div class="chart-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="chart-header">
+                    <h2><i class="bi bi-mortarboard-fill"></i> Grafik Pendidikan</h2>
+                    <p>Komposisi tingkat pendidikan penduduk Desa Purworejo.</p>
+                </div>
+                <canvas id="pendidikanChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-row">
+            <div class="chart-card" data-aos="fade-up">
+                <div class="chart-header">
+                    <h2><i class="bi bi-briefcase-fill"></i> Grafik Pekerjaan</h2>
+                    <p>Komposisi penduduk berdasarkan jenis pekerjaan.</p>
+                </div>
+                <canvas id="pekerjaanChart"></canvas>
+            </div>
+            <div class="chart-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="chart-header">
+                    <h2><i class="bi bi-book-fill"></i> Grafik Agama</h2>
+                    <p>Komposisi penduduk berdasarkan agama yang dianut.</p>
+                </div>
+                <canvas id="agamaChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TABLE -->
+<section class="statistics-table">
+    <div class="container">
+        <div class="table-card" data-aos="fade-up">
+            <div class="chart-header">
+                <h2><i class="bi bi-table"></i> Ringkasan Data Penduduk</h2>
+                <p>Data ringkasan berdasarkan wilayah administrasi Desa Purworejo.</p>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dusun</th>
+                            <th>RW</th>
+                            <th>RT</th>
+                            <th>KK</th>
+                            <th>Penduduk</th>
+                            <th>L</th>
+                            <th>P</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pendudukTable">
+                        <tr><td colspan="7" style="text-align:center">Memuat data...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INFO -->
+<section class="statistics-info">
+    <div class="container">
+        <div class="info-card" data-aos="fade-up">
+            <div class="chart-header">
+                <h2><i class="bi bi-info-circle-fill"></i> Status Data Statistik</h2>
+                <p>Informasi sinkronisasi data Portal Digital Desa Purworejo.</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="bi bi-clock-history"></i>
+                    <h4>Terakhir Diperbarui</h4>
+                    <p id="lastUpdate">Memuat data...</p>
+                </div>
+                <div class="info-item">
+                    <i class="bi bi-database"></i>
+                    <h4>Sumber Data</h4>
+                    <p>Google Spreadsheet Pemerintah Desa Purworejo</p>
+                </div>
+                <div class="info-item">
+                    <i class="bi bi-wifi"></i>
+                    <h4>Status Sinkronisasi</h4>
+                    <p><span class="status-online">● Online</span></p>
+                </div>
+            </div>
+            <div class="export-button">
+                <button id="btnPrint"><i class="bi bi-printer-fill"></i> Cetak</button>
+                <button id="btnPdf"><i class="bi bi-file-earmark-pdf-fill"></i> PDF</button>
+                <button id="btnExcel"><i class="bi bi-file-earmark-excel-fill"></i> Excel</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- USIA PENDUDUK -->
+<section class="usia-section">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <span>Demografi</span>
+            <h2>Penduduk Berdasarkan Usia</h2>
+        </div>
+        <div class="usia-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="usia-card">
+                <div class="usia-icon">👶</div>
+                <h3 id="usiaBalita">0</h3>
+                <p>Balita</p>
+                <span class="usia-range">0-5 tahun</span>
+            </div>
+            <div class="usia-card">
+                <div class="usia-icon">🧒</div>
+                <h3 id="usiaAnak">0</h3>
+                <p>Anak</p>
+                <span class="usia-range">6-12 tahun</span>
+            </div>
+            <div class="usia-card">
+                <div class="usia-icon">🧑</div>
+                <h3 id="usiaRemaja">0</h3>
+                <p>Remaja</p>
+                <span class="usia-range">13-17 tahun</span>
+            </div>
+            <div class="usia-card">
+                <div class="usia-icon">👨</div>
+                <h3 id="usiaDewasa">0</h3>
+                <p>Dewasa</p>
+                <span class="usia-range">18-59 tahun</span>
+            </div>
+            <div class="usia-card">
+                <div class="usia-icon">🧓</div>
+                <h3 id="usiaPraLansia">0</h3>
+                <p>Pra Lansia</p>
+                <span class="usia-range">60-69 tahun</span>
+            </div>
+            <div class="usia-card">
+                <div class="usia-icon">👴</div>
+                <h3 id="usiaLansia">0</h3>
+                <p>Lansia</p>
+                <span class="usia-range">70+ tahun</span>
+            </div>
+        </div>
+        <div class="chart-card" style="margin-top:40px;" data-aos="fade-up">
+            <div class="chart-header">
+                <h2><i class="bi bi-bar-chart-fill"></i> Grafik Usia Penduduk</h2>
+            </div>
+            <canvas id="usiaChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo-ponorogo.png" alt="Logo">
+                    <img src="images/logo-desa.png" alt="Logo Desa">
+                </div>
+                <h3>Portal Digital Desa</h3>
+                <p>Website resmi Pemerintah Desa Purworejo.</p>
+            </div>
+            <div class="footer-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="statistics.html">Statistik</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Pemerintah Desa Purworejo</p>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/config.js"></script>
+<script src="js/helper.js"></script>
+<script src="js/api.js"></script>
+<script src="js/statistik.js"></script>
+
+<script>
+AOS.init({ duration: 800, once: true });
+window.addEventListener('load', () => {
+    document.getElementById('loader').classList.add('hide');
+});
+
+// Update last update time
+document.getElementById('lastUpdate').textContent = new Date().toLocaleDateString('id-ID', {
+    day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit'
+});
+</script>
+
+</body>
+</html>

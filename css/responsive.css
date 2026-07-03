@@ -1,0 +1,93 @@
+/* ==========================================
+   RESPONSIVE - PORTAL DIGITAL DESA v2.0
+========================================== */
+
+/* Large Tablet (1024px) */
+@media(max-width:1024px){
+    .container { width:95%; }
+    .navbar { grid-template-columns:auto 1fr auto; }
+    nav { display:none; position:absolute; top:100%; left:0; right:0; background:#fff; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.1); }
+    nav.active { display:block; }
+    nav ul { flex-direction:column; gap:15px; align-items:flex-start; }
+    .menu-toggle { display:block; justify-self:end; }
+    .header-button .btn-primary span { display:none; }
+    .header-button .btn-primary { padding:10px 14px; }
+    .hero-content h1 { font-size:42px; }
+    .quick-grid { grid-template-columns:repeat(3,1fr); }
+    .stat-grid { grid-template-columns:repeat(2,1fr); }
+    .news-grid { grid-template-columns:repeat(2,1fr); }
+    .services-grid { grid-template-columns:repeat(2,1fr); }
+    .welcome-wrapper { grid-template-columns:1fr; gap:40px; }
+    .welcome-photo { max-width:400px; margin:0 auto; }
+    .welcome-photo img { height:400px; }
+    .budget-wrapper { grid-template-columns:repeat(2,1fr); }
+    .contact-wrapper { grid-template-columns:1fr; }
+    .footer-grid { grid-template-columns:repeat(2,1fr); }
+    .chart-row { grid-template-columns:1fr; }
+    .statistics-card .stat-grid { grid-template-columns:repeat(2,1fr); }
+    .filter-grid { grid-template-columns:repeat(2,1fr); }
+    .info-grid { grid-template-columns:1fr; }
+}
+
+/* Tablet (768px) */
+@media(max-width:768px){
+    .top-left span { display:none; }
+    .logo-text h2 { font-size:15px; }
+    .logo-text span { font-size:11px; }
+    .logo-kabupaten { width:40px; height:40px; }
+    .logo-desa { width:36px; height:36px; }
+    .hero-slide { height:500px; }
+    .hero-content h1 { font-size:32px; }
+    .hero-content p { font-size:16px; }
+    .hero-button { flex-direction:column; }
+    .btn-primary, .btn-secondary { width:100%; justify-content:center; }
+    .quick-grid { grid-template-columns:repeat(2,1fr); }
+    .section-title h2 { font-size:28px; }
+    .stat-grid { grid-template-columns:repeat(2,1fr); }
+    .news-grid { grid-template-columns:1fr; }
+    .services-grid { grid-template-columns:1fr; }
+    .budget-wrapper { grid-template-columns:1fr; }
+    .footer-grid { grid-template-columns:1fr; gap:30px; }
+    .detail-image { height:250px; }
+    #detailJudul { font-size:26px; }
+    .filter-grid { grid-template-columns:1fr; }
+    .statistics-card .stat-grid { grid-template-columns:repeat(2,1fr); }
+    .export-button { flex-direction:column; }
+    .export-button button { width:100%; justify-content:center; }
+}
+
+/* Mobile (480px) */
+@media(max-width:480px){
+    .hero-slide { height:450px; }
+    .hero-content h1 { font-size:26px; }
+    .hero-badge { font-size:12px; padding:8px 16px; }
+    .quick-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
+    .quick-card { padding:20px 12px; }
+    .quick-icon { width:55px; height:55px; font-size:24px; }
+    .quick-card h3 { font-size:14px; }
+    .quick-card p { font-size:12px; }
+    .stat-grid { grid-template-columns:repeat(2,1fr); gap:15px; }
+    .stat-card { padding:25px 15px; }
+    .stat-card h3 { font-size:28px; }
+    .welcome-content h2 { font-size:26px; }
+    .service-card { padding:30px 20px; }
+    .page-header h1 { font-size:28px; }
+    .page-banner-content h1 { font-size:28px; }
+    .filter-item select { padding:12px; }
+    .stat-box h2 { font-size:24px; }
+    .chart-card { padding:20px; }
+    .table-card { padding:20px; }
+    .table-card th, .table-card td { padding:10px 8px; font-size:13px; }
+    .info-item { padding:15px; }
+    .whatsapp { width:45px; height:45px; font-size:20px; bottom:20px; left:20px; }
+    .back-top { width:40px; height:40px; font-size:20px; bottom:20px; right:20px; }
+}
+
+/* Small Mobile (360px) */
+@media(max-width:360px){
+    .logo-text h2 { font-size:13px; }
+    .hero-content h1 { font-size:22px; }
+    .section-title h2 { font-size:24px; }
+    .quick-grid { grid-template-columns:repeat(2,1fr); }
+    .stat-grid { grid-template-columns:repeat(2,1fr); }
+}
