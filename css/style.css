@@ -128,6 +128,35 @@ nav a:hover::after, nav a.active::after { width:100%; }
 .quick-card { background:#fff; border-radius:var(--radius); padding:30px 20px; text-align:center; box-shadow:var(--shadow); transition:.35s; border:1px solid #ECEFF1; }
 .quick-card:hover { transform:translateY(-10px); box-shadow:var(--shadow-lg); }
 .quick-icon { width:70px; height:70px; margin:0 auto 20px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#E8F5E9; color:var(--primary); font-size:32px; transition:.3s; }
+.quick-icon.blue{
+    background:#2F80ED;
+    color:#fff;
+}
+
+.quick-icon.green{
+    background:#4CAF50;
+    color:#fff;
+}
+
+.quick-icon.purple{
+    background:#8E44AD;
+    color:#fff;
+}
+
+.quick-icon.orange{
+    background:#F39C12;
+    color:#fff;
+}
+
+.quick-icon.red{
+    background:#E74C3C;
+    color:#fff;
+}
+
+.quick-icon.teal{
+    background:#16A085;
+    color:#fff;
+}
 .quick-card:hover .quick-icon { background:var(--primary); color:#fff; transform:scale(1.1); }
 .quick-card h3 { font-size:17px; margin-bottom:10px; color:var(--dark); }
 .quick-card p { font-size:13px; color:var(--text-light); line-height:1.5; }
