@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Digital Desa Purworejo</title>
+    <meta name="description" content="Portal Digital Resmi Pemerintah Desa Purworejo Kecamatan Balong Kabupaten Ponorogo">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="spinner"></div>
+    <p>Memuat Portal Desa...</p>
+</div>
+
+<!-- TOPBAR -->
+<section class="topbar">
+    <div class="container topbar-content">
+        <div class="top-left">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Jl. Parekisit No. 11 Desa Purworejo • Kec. Balong • Kab. Ponorogo</span>
+        </div>
+        <div class="top-right">
+            <a href="https://www.facebook.com/desapurworejo17" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/purworejobalong/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/@purworejobalong6042" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a href="mailto:purworejo1bersatu@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- HEADER -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo-ponorogo.png" alt="Logo Kabupaten Ponorogo" class="logo-kabupaten">
+                <div class="logo-text">
+                    <h2 id="namaDesa">PEMERINTAH DESA PURWOREJO</h2>
+                    <span id="wilayah">Kecamatan Balong • Kabupaten Ponorogo</span>
+                </div>
+                <img src="images/logo-desa.png" alt="Logo Desa Purworejo" class="logo-desa">
+            </a>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="#" onclick="segeraHadir('Pemerintahan');return false;">Pemerintahan</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="statistics.html">Statistik</a></li>
+                    <li><a href="#" onclick="segeraHadir('PPID');return false;">PPID</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-button">
+                <a href="https://purworejobersatu.github.io/surat-desa-purworejo/" target="_blank" rel="noopener" class="btn-primary">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>Ajukan Surat</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="swiper heroSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="hero-slide">
+                    <img src="images/balai-desa.jpg" alt="Balai Desa Purworejo">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="hero-content" data-aos="fade-up">
+                            <span class="hero-badge">Selamat Datang di Website Resmi</span>
+                            <h1>Portal Digital<br>Desa Purworejo</h1>
+                            <p>Portal informasi resmi Pemerintah Desa Purworejo sebagai media pelayanan publik, transparansi pemerintahan, dan layanan digital bagi masyarakat.</p>
+                            <div class="hero-button">
+                                <a href="https://purworejobersatu.github.io/surat-desa-purworejo/" target="_blank" class="btn-primary">
+                                    <i class="bi bi-send-fill"></i> Ajukan Surat
+                                </a>
+                                <a href="profil.html" class="btn-secondary">
+                                    <i class="bi bi-building"></i> Profil Desa
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- RUNNING TEXT -->
+<section class="running-text">
+    <div class="container">
+        <div class="running-wrapper">
+            <div class="running-label">
+                <i class="bi bi-megaphone-fill"></i>
+                <span>Pengumuman</span>
+            </div>
+            <marquee id="runningText" behavior="scroll" direction="left" scrollamount="5">
+                Memuat pengumuman...
+            </marquee>
+        </div>
+    </div>
+</section>
+
+<!-- QUICK MENU - 6 Ikon Horizontal -->
+<section class="quick-menu" id="layanan">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <span>Menu Utama</span>
+            <h2>Layanan Cepat</h2>
+            <p>Akses informasi dan layanan Pemerintah Desa Purworejo dengan mudah.</p>
+        </div>
+        <div class="quick-grid" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://purworejobersatu.github.io/surat-desa-purworejo/" target="_blank" class="quick-card">
+                <div class="quick-icon blue"><i class="bi bi-file-earmark-text"></i></div>
+                <h3>Surat Online</h3>
+                <p>Ajukan pelayanan surat secara online.</p>
+            </a>
+            <a href="profil.html" class="quick-card">
+                <div class="quick-icon green"><i class="bi bi-bank"></i></div>
+                <h3>Profil Desa</h3>
+                <p>Sejarah, visi misi dan profil desa.</p>
+            </a>
+            <a href="berita.html" class="quick-card">
+                <div class="quick-icon purple"><i class="bi bi-newspaper"></i></div>
+                <h3>Berita</h3>
+                <p>Informasi dan kegiatan terbaru desa.</p>
+            </a>
+            <a href="statistics.html" class="quick-card">
+                <div class="quick-icon orange"><i class="bi bi-bar-chart"></i></div>
+                <h3>Statistik</h3>
+                <p>Statistik penduduk dan wilayah desa.</p>
+            </a>
+            <a href="#" onclick="segeraHadir('PPID');return false;" class="quick-card">
+                <div class="quick-icon red"><i class="bi bi-folder-check"></i></div>
+                <h3>PPID</h3>
+                <p>Informasi publik dan transparansi desa.</p>
+            </a>
+            <a href="#" onclick="segeraHadir('Pengaduan');return false;" class="quick-card">
+                <div class="quick-icon teal"><i class="bi bi-chat-dots"></i></div>
+                <h3>Pengaduan</h3>
+                <p>Aspirasi dan pengaduan masyarakat.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- STATISTIK - Angka Langsung Tampil -->
+<section class="statistics" id="statistik">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <span>Data Desa</span>
+            <h2>Statistik Penduduk</h2>
+        </div>
+        <div class="stat-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-card">
+                <i class="bi bi-people-fill"></i>
+                <h3 id="totalPenduduk">2.785</h3>
+                <p>Jumlah Penduduk</p>
+            </div>
+            <div class="stat-card">
+                <i class="bi bi-house-door-fill"></i>
+                <h3 id="totalKK">932</h3>
+                <p>Kepala Keluarga</p>
+            </div>
+            <div class="stat-card">
+                <i class="bi bi-person-workspace"></i>
+                <h3 id="totalRT">13</h3>
+                <p>RT</p>
+            </div>
+            <div class="stat-card">
+                <i class="bi bi-diagram-3-fill"></i>
+                <h3 id="totalRW">2</h3>
+                <p>RW</p>
+            </div>
+        </div>
+        <div class="stat-cta" data-aos="fade-up">
+            <a href="statistics.html" class="btn-primary">
+                <i class="bi bi-bar-chart-line"></i> Lihat Statistik Lengkap
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- DATA STATIS DESA -->
+<section class="data-desa" id="data-desa">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <span>Informasi Umum</span>
+            <h2>Data Desa Purworejo</h2>
+        </div>
+        <div class="data-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="data-card">
+                <div class="data-icon"><i class="bi bi-mosque"></i></div>
+                <h3>11</h3>
+                <p>Tempat Ibadah<br><small>3 Masjid, 8 Mushola</small></p>
+            </div>
+            <div class="data-card">
+                <div class="data-icon"><i class="bi bi-building"></i></div>
+                <h3>2</h3>
+                <p>Makam Umum<br><small>TPU Swatu & TPU Setono</small></p>
+            </div>
+            <div class="data-card">
+                <div class="data-icon"><i class="bi bi-hospital"></i></div>
+                <h3>5</h3>
+                <p>Fasilitas Kesehatan<br><small>1 Poskesdes, 4 Posyandu</small></p>
+            </div>
+            <div class="data-card">
+                <div class="data-icon"><i class="bi bi-shield-check"></i></div>
+                <h3>9</h3>
+                <p>Pos Kamling</p>
+            </div>
+            <div class="data-card">
+                <div class="data-icon"><i class="bi bi-book"></i></div>
+                <h3>-</h3>
+                <p>Sekolah<br><small>Data dari Dinas Pendidikan</small></p>
+            </div>
+            <div class="data-card">
+                <div class="data-icon"><i class="bi bi-map"></i></div>
+                <h3>1.254</h3>
+                <p>Ha<br><small>Luas Wilayah</small></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SAMBUTAN -->
+<section class="welcome" id="profil">
+    <div class="container">
+        <div class="welcome-wrapper" data-aos="fade-up">
+            <div class="welcome-photo">
+                <img src="images/foto-kades.jpg" alt="Didik Subagio, S.E. - Kepala Desa Purworejo">
+                <div class="photo-caption">
+                    <h4>Didik Subagio, S.E.</h4>
+                    <p>Kepala Desa Purworejo</p>
+                </div>
+            </div>
+            <div class="welcome-content">
+                <span>Sambutan Kepala Desa</span>
+                <h2>Selamat Datang di Portal Digital Desa Purworejo</h2>
+                <p>Assalamu'alaikum Warahmatullahi Wabarakatuh.</p>
+                <p>Dengan mengucapkan puji syukur ke hadirat Allah SWT, kami menghadirkan Portal Digital Desa Purworejo sebagai media informasi dan pelayanan kepada masyarakat.</p>
+                <p>Semoga website ini mampu meningkatkan transparansi, mempercepat pelayanan, serta menjadi sarana komunikasi antara Pemerintah Desa dan masyarakat.</p>
+                <a href="profil.html" class="btn-primary">Selengkapnya</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BERITA -->
+<section class="news" id="berita">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <span>Informasi Desa</span>
+            <h2>Berita Terbaru</h2>
+        </div>
+        <div class="news-grid" id="homeNews" data-aos="fade-up" data-aos-delay="100">
+            <div class="loading-news">
+                <div class="spinner-small"></div>
+                <p>Memuat berita terbaru...</p>
+            </div>
+        </div>
+        <div class="news-cta" data-aos="fade-up">
+            <a href="berita.html" class="btn-primary">
+                <i class="bi bi-newspaper"></i> Lihat Semua Berita
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- LAYANAN -->
+<section class="services" id="layanan">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <span>Pelayanan Publik</span>
+            <h2>Layanan Desa</h2>
+            <p>Pemerintah Desa Purworejo berkomitmen memberikan pelayanan yang cepat, mudah, transparan dan profesional.</p>
+        </div>
+        <div class="services-grid" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <h3>Administrasi Surat</h3>
+                <p>Pengajuan berbagai surat keterangan secara online.</p>
+            </div>
+            <div class="service-card">
+                <i class="bi bi-person-vcard-fill"></i>
+                <h3>Kependudukan</h3>
+                <p>Informasi data kependudukan dan administrasi warga.</p>
+            </div>
+            <div class="service-card">
+                <i class="bi bi-house-check-fill"></i>
+                <h3>Pelayanan Umum</h3>
+                <p>Pelayanan administrasi pemerintahan desa.</p>
+            </div>
+            <div class="service-card">
+                <i class="bi bi-bank2"></i>
+                <h3>PPID Desa</h3>
+                <p>Keterbukaan informasi publik Pemerintah Desa.</p>
+            </div>
+            <div class="service-card">
+                <i class="bi bi-heart-pulse-fill"></i>
+                <h3>Layanan Sosial</h3>
+                <p>Informasi bantuan sosial dan pelayanan masyarakat.</p>
+            </div>
+            <div class="service-card">
+                <i class="bi bi-chat-left-dots-fill"></i>
+                <h3>Pengaduan</h3>
+                <p>Menyampaikan aspirasi maupun pengaduan masyarakat.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- APBDES -->
+<section class="budget" id="apbdes">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <span>Transparansi</span>
+            <h2>APBDes Tahun 2026</h2>
+            <p>Ringkasan pendapatan dan belanja desa.</p>
+        </div>
+        <div class="budget-wrapper" data-aos="fade-up" data-aos-delay="100">
+            <div class="budget-card income">
+                <i class="bi bi-wallet2"></i>
+                <h3>Pendapatan Desa</h3>
+                <h2 id="apbdesPendapatan">Rp1.145.412.710</h2>
+            </div>
+            <div class="budget-card expense">
+                <i class="bi bi-cash-stack"></i>
+                <h3>Belanja Desa</h3>
+                <h2 id="apbdesBelanja">Rp1.191.004.917</h2>
+            </div>
+            <div class="budget-card remain">
+                <i class="bi bi-piggy-bank-fill"></i>
+                <h3>Defisit</h3>
+                <h2 id="apbdesDefisit">Rp45.592.207</h2>
+            </div>
+        </div>
+        <div class="budget-chart" data-aos="fade-up">
+            <canvas id="apbdesChart"></canvas>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section class="contact" id="kontak">
+    <div class="container">
+        <div class="contact-wrapper" data-aos="fade-up">
+            <div class="contact-info">
+                <span>Hubungi Kami</span>
+                <h2>Pemerintah Desa Purworejo</h2>
+                <p>Jl. Parekisit No. 11 Desa Purworejo, Kecamatan Balong, Kabupaten Ponorogo, Jawa Timur.</p>
+                <ul>
+                    <li><i class="bi bi-telephone-fill"></i> <a href="tel:+6281232693998">+62 812-3269-3998</a> (Kantor)</li>
+                    <li><i class="bi bi-telephone-fill"></i> <a href="tel:+6281335768049">+62 813-3576-8049</a> (Darurat 24 Jam)</li>
+                    <li><i class="bi bi-envelope-fill"></i> <a href="mailto:purworejo1bersatu@gmail.com">purworejo1bersatu@gmail.com</a></li>
+                    <li><i class="bi bi-clock-fill"></i> Senin - Kamis: 08.00 - 13.00 WIB<br>Jum'at: 08.00 - 11.00 WIB</li>
+                </ul>
+                <div class="contact-social">
+                    <a href="https://www.facebook.com/desapurworejo17" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/purworejobalong/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/@purworejobalong6042" target="_blank"><i class="bi bi-youtube"></i></a>
+                    <a href="https://wa.me/6281232693998" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.!2d111.49!3d-7.86!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTEnMzYuMCJTIDExMcKwMjknMjQuMCJF!5e0!3m2!1sid!2sid!4v1234567890" width="100%" height="100%" style="border:0; border-radius:18px; min-height:400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo-ponorogo.png" alt="Logo">
+                    <img src="images/logo-desa.png" alt="Logo Desa">
+                </div>
+                <h3>Portal Digital Desa</h3>
+                <p>Website resmi Pemerintah Desa Purworejo sebagai media informasi, transparansi, pelayanan publik dan promosi potensi desa.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/desapurworejo17" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/purworejobalong/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.youtube.com/@purworejobalong6042" target="_blank"><i class="bi bi-youtube"></i></a>
+                    <a href="https://wa.me/6281232693998" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li><a href="statistics.html">Statistik</a></li>
+                    <li><a href="#" onclick="segeraHadir('Layanan');return false;">Layanan</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <h4>Layanan</h4>
+                <ul>
+                    <li><a href="https://purworejobersatu.github.io/surat-desa-purworejo/" target="_blank">Surat Online</a></li>
+                    <li><a href="#" onclick="segeraHadir('PPID');return false;">PPID</a></li>
+                    <li><a href="statistics.html">Statistik</a></li>
+                    <li><a href="#" onclick="segeraHadir('Pengaduan');return false;">Pengaduan</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontak</h4>
+                <ul>
+                    <li><i class="bi bi-geo-alt"></i> Jl. Parekisit No. 11, Desa Purworejo, Kec. Balong, Kab. Ponorogo</li>
+                    <li><i class="bi bi-telephone"></i> <a href="tel:+6281232693998">+62 812-3269-3998</a></li>
+                    <li><i class="bi bi-telephone"></i> <a href="tel:+6281335768049">Darurat: +62 813-3576-8049</a></li>
+                    <li><i class="bi bi-envelope"></i> <a href="mailto:purworejo1bersatu@gmail.com">purworejo1bersatu@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Pemerintah Desa Purworejo. Seluruh Hak Cipta Dilindungi.</p>
+            <p>Made with <i class="bi bi-heart-fill"></i> for Desa Purworejo</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="#" class="back-top" id="backTop"><i class="bi bi-arrow-up-short"></i></a>
+<a href="https://wa.me/6281232693998" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/helper.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/api.js"></script>
+<script src="js/profil.js"></script>
+<script src="js/pengumuman.js"></script>
+<script src="js/home-news.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+AOS.init({ duration: 800, once: true });
+
+const heroSwiper = new Swiper(".heroSwiper", {
+    loop: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    pagination: { el: ".swiper-pagination", clickable: true }
+});
+
+// APBDES Chart
+const ctx = document.getElementById('apbdesChart');
+if (ctx) {
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Pendapatan Asli Desa', 'Dana Desa', 'Bagi Hasil Pajak', 'Alokasi Dana Desa', 'Pendapatan Lain'],
+            datasets: [{
+                data: [239400000, 286749000, 91830363, 527433347, 0],
+                backgroundColor: ['#1B5E20', '#1565C0', '#F9A825', '#E91E63', '#78909C'],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom', labels: { padding: 15, font: { size: 12 } } },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            let value = context.parsed;
+                            return label + ': Rp ' + value.toLocaleString('id-ID');
+                        }
+                    }
+                }
+            }
+        }
+    });
+}
+
+// Loader
+window.addEventListener('load', () => {
+    document.getElementById('loader').classList.add('hide');
+});
+
+// Back to top
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) backTop.classList.add('show');
+    else backTop.classList.remove('show');
+});
+</script>
+
+</body>
+</html>
