@@ -1,0 +1,59 @@
+<!-- ============================================ -->
+<!-- HEADER & TOPBAR - REUSABLE COMPONENT         -->
+<!-- Include via: fetch('components/header.html') -->
+<!-- ============================================ -->
+
+<!-- TOPBAR -->
+<section class="topbar">
+    <div class="container topbar-content">
+        <div class="top-left">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Jl. Parekisit No. 11 Desa Purworejo • Kec. Balong • Kab. Ponorogo</span>
+        </div>
+        <div class="top-right">
+            <a href="https://www.facebook.com/desapurworejo17" target="_blank" aria-label="Facebook Desa Purworejo"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/purworejobalong/" target="_blank" aria-label="Instagram Desa Purworejo"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/@purworejobalong6042" target="_blank" aria-label="YouTube Desa Purworejo"><i class="bi bi-youtube"></i></a>
+            <a href="mailto:purworejo1bersatu@gmail.com" aria-label="Email Desa Purworejo"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- HEADER / NAVBAR -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo-ponorogo.png" alt="Logo Kabupaten Ponorogo" class="logo-kabupaten" loading="lazy">
+                <div class="logo-text">
+                    <h2 id="namaDesa">PEMERINTAH DESA PURWOREJO</h2>
+                    <span id="wilayah">Kecamatan Balong • Kabupaten Ponorogo</span>
+                </div>
+                <img src="images/logo-desa.png" alt="Logo Desa Purworejo" class="logo-desa" loading="lazy">
+            </a>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" data-page="beranda">Beranda</a></li>
+                    <li><a href="profil.html" data-page="profil">Profil</a></li>
+                    <li><a href="pemerintahan.html" data-page="pemerintahan">Pemerintahan</a></li>
+                    <li><a href="berita.html" data-page="berita">Berita</a></li>
+                    <li><a href="statistics.html" data-page="statistik">Statistik</a></li>
+                    <li><a href="#" onclick="segeraHadir('PPID');return false;" data-page="ppid">PPID</a></li>
+                    <li><a href="#kontak" data-page="kontak">Kontak</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-button">
+                <a href="https://purworejobersatu.github.io/surat-desa-purworejo/" target="_blank" rel="noopener" class="btn-primary">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>Ajukan Surat</span>
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </div>
+</header>
